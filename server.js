@@ -10,6 +10,9 @@ app.use(express.urlencoded({extended: true}));
 //parse incoming json data
 app.use(express.json());
 
+//load public folder data
+app.use(express.static('public'));
+
 const {animals} = require('./data/animals');
 
 function filterByQuery(query, animalsArray) {
@@ -111,6 +114,18 @@ app.post('/api/animals', (req, res) => {
 
         res.json(animal);
     }
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+app.get('/zookeepers', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/zookeepers.html'));
 });
 
 app.listen(PORT, () => {

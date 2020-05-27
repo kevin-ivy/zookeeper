@@ -135,6 +135,26 @@
         "hungry"
       ],
       "id": "13"
+    },
+    {
+      "name": "Ocypete",
+      "species": "Harpy",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry"
+      ],
+      "id": "14"
+    },
+    {
+      "name": "Celaeno",
+      "species": "Harpy",
+      "diet": "omnivore",
+      "personalityTraits": [
+        "hungry",
+        "loving",
+        "goofy"
+      ],
+      "id": "15"
     }
   ]
 }
